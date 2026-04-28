@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmacia Molco | Tu farmacia de confianza en Villarrica</title>
-    <meta name="description" content="Farmacia en Molco, Villarrica. Medicamentos, asesoría farmacéutica, control de salud y atención cercana. Visítanos o contáctanos por WhatsApp.">
-    <meta name="keywords" content="farmacia Molco, farmacia Villarrica, farmacia cerca de Pucón, medicamentos, asesoría farmacéutica, control de salud, bienestar, Chile">
+    <title>Farmacia Molco | Tu farmacia de confianza en Molco, Villarrica</title>
+    <meta name="description" content="Farmacia en Molco, Villarrica. Medicamentos, asesoría farmacéutica, control de salud y atención cercana. +200 familias nos prefieren. Visítanos en Camino Villarrica Pucón.">
+    <meta name="keywords" content="farmacia Molco, farmacia Villarrica, farmacia Pucón, medicamentos Chile, asesoría farmacéutica, control salud, bienestar, farmacia comunitaria, salud Villarrica">
     <meta name="geo.region" content="CL-AR">
-    <meta name="geo.placename" content="Molco, Villarrica">
+    <meta name="geo.placename" content="Molco, Villarrica, Chile">
     <meta name="author" content="Farmacia Molco">
+    <meta name="robots" content="index, follow">
     <meta property="og:title" content="Farmacia Molco | Tu farmacia de confianza en Villarrica">
-    <meta property="og:description" content="Tu farmacia de confianza en Molco, Villarrica. Medicamentos, atención farmacéutica y bienestar para tu familia.">
+    <meta property="og:description" content="Tu farmacia de confianza en Molco. +200 familias nos prefieren por nuestra atención cercana y profesional.">
     <meta property="og:image" content="319119023_115478831401187_7668229456759626168_n.jpg">
     <meta property="og:url" content="https://www.instagram.com/farmaciamolco/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://vercel.app/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="319119023_115478831401187_7668229456759626168_n.jpg">
     <style>
         :root {
             --primary: #00B894;
@@ -126,6 +130,47 @@
             background: var(--white);
             box-shadow: var(--shadow);
             padding: 15px 50px;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--dark);
+            padding: 10px 0;
+            font-size: 14px;
+        }
+
+        .top-bar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-left {
+            display: flex;
+            gap: 30px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .top-bar-left span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar-right a {
+            color: var(--mint);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-bar-right a:hover {
+            color: var(--white);
         }
 
         .logo {
@@ -246,6 +291,57 @@
         .about {
             padding: 120px 50px;
             background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+        }
+
+        .why-choose {
+            padding: 120px 50px;
+            background: var(--white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: var(--light);
+            border-radius: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .why-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 32px;
+            color: var(--white);
+        }
+
+        .why-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .why-card p {
+            font-size: 15px;
+            color: var(--gray);
+            line-height: 1.7;
         }
 
         .testimonials {
@@ -543,6 +639,16 @@
         }
 
         @media (max-width: 768px) {
+            .top-bar-content {
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 20px;
+            }
+            .top-bar-left {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
             .hero-content h1 {
                 font-size: 36px;
             }
@@ -553,10 +659,10 @@
                 font-size: 12px;
                 padding: 8px 14px;
             }
-            .services, .about, .testimonials, .location, .cta {
+            .services, .about, .testimonials, .location, .cta, .why-choose {
                 padding: 80px 20px;
             }
-            .services-grid, .testimonials-grid {
+            .services-grid, .testimonials-grid, .why-grid {
                 grid-template-columns: 1fr;
             }
             .section-header h2 {
@@ -574,6 +680,12 @@
             .floating-whatsapp {
                 bottom: 20px;
                 right: 20px;
+            }
+            .navbar {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                display: none;
             }
         }
 
@@ -1199,6 +1311,19 @@
     </style>
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fas fa-map-marker-alt"></i> Camino Villarrica Pucón 10,3 Sector Molco</span>
+                <span><i class="fas fa-clock"></i> Lun-Sáb: 9:00 - 21:00</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://wa.me/56964691874"><i class="fab fa-whatsapp"></i> Escríbenos</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">
@@ -1207,9 +1332,9 @@
         </div>
         <ul class="nav-links">
             <li><a href="#services">Servicios</a></li>
-            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#why">Por qué elegirnos</a></li>
+            <li><a href="#testimonials">Comentarios</a></li>
             <li><a href="#location">Ubicación</a></li>
-            <li><a href="#contact">Contacto</a></li>
         </ul>
         <div class="menu-toggle">
             <span></span>
@@ -1220,7 +1345,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
+        <video class="hero-video" autoplay muted loop playsinline preload="none" poster="319119023_115478831401187_7668229456759626168_n.jpg">
             <source src="🔉iLlegó el verano!☀️🌅Y en Farmacia Molco tenemos todo lo que buscas para tu salud y bienestar .mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -1272,6 +1397,36 @@
                 </div>
                 <h3>Control de Salud</h3>
                 <p>Monitoreo de presión y apoyo preventivo para cuidar tu salud.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose" id="why">
+        <div class="section-header">
+            <h2>¿Por qué elegir Farmacia Molco?</h2>
+            <p>Más de 200 familias nos prefieren en Molco y Villarrica</p>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-heart"></i></div>
+                <h3>Atención Cercana</h3>
+                <p>Te conocemos por tu nombre. Brindamos una atención personalizada y cercana a cada miembro de tu familia.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-award"></i></div>
+                <h3>5 Años de Confianza</h3>
+                <p>Desde 2020 cuidando la salud de nuestra comunidad con profesionalismo y compromiso.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-tags"></i></div>
+                <h3>Precios Accesibles</h3>
+                <p>Productos de calidad a precios justos. Cuidamos el bolsillo de tu familia.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon"><i class="fas fa-user-md"></i></div>
+                <h3>Asesoría Profesional</h3>
+                <p>Nuestro equipo te orienta sobre el uso correcto de tus medicamentos.</p>
             </div>
         </div>
     </section>
